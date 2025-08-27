@@ -1,5 +1,5 @@
 FROM node:14
-WORKDIR /app/sub/dir
+WORKDIR /app/sub
 COPY . .
 RUN npm install
 CMD ["node", "app.js"]

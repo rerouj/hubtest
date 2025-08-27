@@ -20,3 +20,10 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: renatodiaz/renanode:1.2b
+    - name: Update Docker Hub repo description
+    uses: peter-evans/dockerhub-description@v3
+    with:
+      username: ${{ secrets.DOCKERHUB_USERNAME }}
+      password: ${{ secrets.DOCKERHUB_TOKEN }}
+      repository: renatodiaz/renanode
+      readme-filepath: ./README.md
